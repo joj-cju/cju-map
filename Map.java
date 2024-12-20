@@ -10,11 +10,8 @@ import javax.swing.*;
 
 public class Map extends JFrame {
 
-    /**
-     * 필드 선언
-     */
-    JPanel panel = new JPanel();
-    JLabel label = new JLabel();
+    JPanel buttonPanel = new JPanel();
+    JLabel textLabel = new JLabel("테스트용 텍스트");
 
     JButton[] buttons = new JButton[23];
     String[] list = new String[]{
@@ -36,30 +33,39 @@ public class Map extends JFrame {
             return;
         }
 
-        bgPanel.setLayout(new BorderLayout());
-        buttons();
+        bgPanel.setLayout(null);
 
-        bgPanel.add(panel, BorderLayout.CENTER);
+        buttons();
+        text();
+
+        bgPanel.add(buttonPanel);
+        bgPanel.add(textLabel);
+
+        //x,y,넓이,높이
+        buttonPanel.setBounds(50, 500, 1500, 500);
+        textLabel.setBounds(1200, 100, 200, 100);
+        textLabel.setFont(new Font("맑은고딕", Font.BOLD, 20));
+        textLabel.setForeground(Color.gray);
 
         this.setTitle("청주대학교 지도");
         this.setResizable(false); // 창 크기 변경불가
-        this.setSize(1600, 900);
+        this.setSize(1600, 700);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.add(bgPanel);
         this.setVisible(true);
     }
 
-    
     /**
-     * 버튼 클래스
+     * 버튼 생성
      */
     void buttons() {
-        panel = new JPanel();
-        panel.setOpaque(false);
+        buttonPanel = new JPanel();
+        buttonPanel.setOpaque(false); // 배경 투명
+        buttonPanel.setLayout(new FlowLayout());
 
         for (int i = 0; i < list.length; i++) {
 
-            panel.add(buttons[i] = new JButton(list[i]));
+            buttonPanel.add(buttons[i] = new JButton(list[i]));
             buttons[i].setBackground(Color.cyan);
             buttons[i].setFont(new Font("Arial", Font.BOLD, 18));
 
@@ -68,74 +74,81 @@ public class Map extends JFrame {
 
                 switch (run) {
                     case "1":
-                        System.out.println("1동입니다");
+                        textLabel.setText("1동입니다");
                         break;
                     case "2":
-                        System.out.println("2동입니다");
+                        textLabel.setText("2동입니다");
                         break;
                     case "3":
-                        System.out.println("3동입니다");
+                        textLabel.setText("3동입니다");
                         break;
                     case "4":
-                        System.out.println("4동입니다");
+                        textLabel.setText("4동입니다");
                         break;
                     case "5":
-                        System.out.println("5동입니다");
+                        textLabel.setText("5동입니다");
                         break;
                     case "6":
-                        System.out.println("6동입니다");
+                        textLabel.setText("6동입니다");
                         break;
                     case "7":
-                        System.out.println("7동입니다");
+                        textLabel.setText("7동입니다");
                         break;
                     case "8":
-                        System.out.println("8동입니다");
+                        textLabel.setText("8동입니다");
                         break;
                     case "9":
-                        System.out.println("9동입니다");
+                        textLabel.setText("9동입니다");
                         break;
                     case "10":
-                        System.out.println("10동입니다");
+                        textLabel.setText("10동입니다");
                         break;
                     case "11":
-                        System.out.println("11동입니다");
+                        textLabel.setText("11동입니다");
                         break;
                     case "14":
-                        System.out.println("14동입니다");
+                        textLabel.setText("14동입니다");
                         break;
                     case "16":
-                        System.out.println("16동입니다");
+                        textLabel.setText("16동입니다");
                         break;
                     case "18":
-                        System.out.println("18동입니다");
+                        textLabel.setText("18동입니다");
                         break;
                     case "20":
-                        System.out.println("20동입니다");
+                        textLabel.setText("20동입니다");
                         break;
                     case "23":
-                        System.out.println("23동입니다");
+                        textLabel.setText("23동입니다");
                         break;
                     case "38":
-                        System.out.println("38동입니다");
+                        textLabel.setText("38동입니다");
                         break;
                     case "40":
-                        System.out.println("40동입니다");
+                        textLabel.setText("40동입니다");
                         break;
                     case "42":
-                        System.out.println("42동입니다");
+                        textLabel.setText("42동입니다");
                         break;
                     case "46":
-                        System.out.println("46동입니다");
+                        textLabel.setText("46동입니다");
                         break;
                     case "92":
-                        System.out.println("92동입니다");
+                        textLabel.setText("92동입니다");
                         break;
                     case "98":
-                        System.out.println("98동입니다");
+                        textLabel.setText("98동입니다");
                         break;
                 }
             });
         }
+    }
+
+    /**
+     * 텍스트 설정
+     */
+    void text() {
+        textLabel.setHorizontalAlignment(SwingConstants.CENTER);
     }
 
     public static void main(String[] args) {
@@ -153,7 +166,6 @@ class BackgroundPanel extends JPanel {
         this.backgroundImage = backgroundImage;
     }
 
-    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (backgroundImage != null) {
