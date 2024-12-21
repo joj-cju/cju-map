@@ -1,5 +1,22 @@
 package pkg;
 
+/**
+ * 개선된 청주대학교 지도 맵
+ * 
+ * @author 2021011923 정원진
+ * @version : 0.0.0
+ * 
+ * @created 2024-12-17
+ * @lastModified 2024-12-21
+ * 
+ * @changelog
+ * 	2024-12-17: 프로젝트 시작 및 프로토타입 생성
+ * 	2024-12-19: 배경이미지 추가
+ * 	2024-12-20: 텍스트추가 및 절대위치지정
+ *  2024-12-21: 텍스트 세분화 및 버튼 클릭시 출력값 추가
+ * 
+ */
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
