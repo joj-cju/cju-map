@@ -14,7 +14,7 @@
 
 때는 바야흐로 21년 신입생 시절 
 
-학교의 전체적인 구조를 보기위해 캠퍼스 지도사이트(https://www.cju.ac.kr/site/campusmap/sub.jsp)에 접속했습니다.
+학교의 전체적인 구조를 보기위해 캠퍼스 지도사이트(https://www.cju.ac.kr/site/campusmap/sub.jsp) 에 접속했습니다.
 ![캠퍼스지도](https://github.com/user-attachments/assets/6f83e947-3d90-4152-ab89-0abd2be02bb3)
 
 우선 여기서부터 쉽지 않았습니다.
